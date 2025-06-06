@@ -1,0 +1,16 @@
+---
+const { title, href } = Astro.props;
+---
+
+<li>
+  <a
+    class="relative text-white/70 hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg overflow-hidden group"
+    href={href}
+  >
+    <span class="relative z-10">{title}</span>
+    <div
+      class="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-lg"
+    >
+    </div>
+  </a>
+</li>

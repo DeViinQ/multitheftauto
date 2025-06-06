@@ -1,0 +1,52 @@
+---
+const TITLES_NAVBAR = [
+  { title: "Models", href: "/" },
+  { title: "Forums", href: "/" },
+  { title: "Wiki", href: "/" },
+  { title: "Developers", href: "/" },
+  { title: "Partners", href: "/" },
+  { title: "Hosting", href: "/" },
+];
+import Github from "./icons/Github.astro";
+import Windows from "./icons/Windows.astro";
+import HeaderItems from "./items/HeaderItems.astro";
+---
+
+<header
+  class="fixed left-1/2 -translate-x-1/2 text-white top-6 backdrop-blur-md bg-black/20 flex items-center justify-between py-4 px-8 z-50 rounded-2xl max-w-8xl w-[70%] border border-white/10 shadow-lg"
+>
+  <nav class="flex items-center justify-between w-full gap-4">
+    <a href="/" class="flex items-center space-x-2">
+      <img
+        class="w-14 h-10 rounded-lg hover:scale-110 transition-all duration-300 shadow-md"
+        src="/mtasa.webp"
+        alt="Logo"
+      />
+      <span class="font-bold text-lg hidden sm:block">MTA:SA</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-6">
+      {
+        TITLES_NAVBAR.map((item) => (
+          <HeaderItems title={item.title} href={item.href} />
+        ))
+      }
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <a
+        href="/"
+        class="text-white/90 hover:text-white bg-white/10 hover:bg-white/20 transition-all duration-300 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center gap-2 border border-white/10"
+      >
+        <Github size="4" />
+        Contribute
+      </a>
+      <button
+        class="relative w-max gap-x-3 cursor-pointer inline-flex h-10 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 px-6 font-medium text-white transition-all hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black"
+      >
+        <Windows size="24" />
+        Download Now
+      </button>
+    </div>
+  </nav>
+</header>
