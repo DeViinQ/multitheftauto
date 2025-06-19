@@ -1,0 +1,62 @@
+.token.comment {
+  color: #6b7280;
+}
+
+.token.keyword {
+  color: #93c5fd;
+}
+
+.token.string {
+  color: #86efac;
+}
+
+.token.function {
+  color: #c084fc;
+}
+
+.token.number {
+  color: #fb923c;
+}
+
+.token.operator {
+  color: #e879f9;
+}
+
+.token.punctuation {
+  color: #94a3b8;
+}
+
+pre {
+  overflow-x: auto;
+  position: relative;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.typewriter-effect {
+  position: relative;
+}
+
+.typewriter-effect::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: 1;
+  margin-top: 1px;
+  height: 2%;
+  width: 2px;
+  background: #fff;
+  
+  animation: cursor 1s infinite step-end, typing 8s infinite steps(60, end);
+}
+
+@keyframes cursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
